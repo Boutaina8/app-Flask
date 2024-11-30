@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Application Météo</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Application Météo</h1>
+
+        <!-- Formulaire pour saisir la ville -->
+        <form method="POST">
+            <label for="city">Entrez une ville :</label>
+            <input type="text" name="city" placeholder="Ex: Paris" required>
+            <button type="submit">Obtenir la météo</button>
+        </form>
+
+        <div class="weather-info">
+            {% for weather in weather %}
+                <div class="weather-card">
+                    <h2>{{ weather.city }}</h2>
+                    {% if weather.error %}
+                        <p>{{ weather.error }}</p>
+                    {% else %}
+                        <p>Température : {{ weather.temp }}°C</p>
+                        <p>Description : {{ weather.description }}</p>
+                        <p>Vent : {{ weather.wind }} m/s</p>
+                        <p>Humidité : {{ weather.humidity }}%</p>
+                    {% endif %}
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+</body>
+</html>
