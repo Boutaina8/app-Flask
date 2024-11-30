@@ -8,7 +8,7 @@ if defined _OLD_CODEPAGE (
     "%SystemRoot%\System32\chcp.com" 65001 > nul
 )
 
-set VIRTUAL_ENV=C:\Users\bouta\Downloads\uemf-2024-nodejs-main (8)\FlaskApp\venv
+set VIRTUAL_ENV=C:\Users\bouta\Desktop\PYTHON Projects\FlaskApp\venv
 
 if not defined PROMPT set PROMPT=$P$G
 

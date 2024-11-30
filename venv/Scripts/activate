@@ -35,7 +35,7 @@ deactivate () {
 # unset irrelevant variables
 deactivate nondestructive
 
-VIRTUAL_ENV="C:\Users\bouta\Downloads\uemf-2024-nodejs-main (8)\FlaskApp\venv"
+VIRTUAL_ENV="C:\Users\bouta\Desktop\PYTHON Projects\FlaskApp\venv"
 export VIRTUAL_ENV
 
 _OLD_VIRTUAL_PATH="$PATH"
